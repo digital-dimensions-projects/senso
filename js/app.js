@@ -306,8 +306,6 @@ highscores.sort(function (a, b) {
 	return b[1] - a[1]; // sortiert absteigend
 });
 
-console.log(highscores);
-
 // Highscores Tabelle
 if (highscores.length === 0) el('.highscores').style.display = 'none';
 if (highscores.length > 0) el('h2').style.display = 'none';
@@ -315,9 +313,6 @@ if (highscores.length > 0) el('.highscores-info').style.display = 'none';
 if (highscores.length < 2) el('#btnCLearAll').style.display = 'none';
 
 if (highscores.length === 0) el('.highscores').style.visibility = 'hidden';
-
-// Eintrag GDPR_REMOVAL_FLAG löschen
-highscores.pop();
 
 highscores.forEach((hs) => {
 	const tr = create('tr');
